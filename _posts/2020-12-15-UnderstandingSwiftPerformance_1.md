@@ -204,7 +204,7 @@ key에 해당하는 color, orientation, tail을 하나의 struct로 만들어주
 
 ## 결론
 이번 포스팅에서는 추상화 객체들이 메모리의 어디에 allocation 되는 지에 따라서 성능의 차이를 알아보았고 다음 포스팅에서는 이제 두 번째 측면인 **reference counting**에 대해서 알아보도록 하겠습니다!! <br>
-👉🏻 [다음포스팅으로 이동하려면 여기를 눌러주세요!!!](https://velog.io/@minni/Understanding-Swift-Performance-Struct-VS-Class-2) <br>
+👉🏻 [다음포스팅으로 이동하려면 여기를 눌러주세요!!!]({{site.url}}{{site.baseurl}}/wwdc/UnderstandingSwiftPerformance_2) <br>
 
 ## 중요❗️❗️❗️
 WWDC2016 Understanding Swift Performance를 보면 String 타입은 contents가 heap에 저장이 되기 때문에 heap allocation이 발생할 수 있다라고 나오게 된다. 그러나 실제로 [여기](https://github.com/apple/swift/blob/0d4a5853bf665eb860ad19a16048664899c6cce3/stdlib/public/core/StringObject.swift) 들어가서 확인해보면 string은 value의 크기나 종류에 따라서 stack에 쪼개져서 저장될 수도 있고 heap에 저장될 수도 있다고 한다. 링크에서 다음과 같은 부분을 확인해 볼 수 있다. 

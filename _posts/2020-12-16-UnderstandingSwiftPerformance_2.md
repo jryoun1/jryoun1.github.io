@@ -11,7 +11,7 @@ last_modified_at: 2020.12.16
 
 ## 들어가며
 지난 포스팅은 WWDC 2016 Understanding Swift Performance 영상에서 **메모리 영역의 어느 부분에 allocation을 하는지에 따라서 Swift의 어떠한 성능의 차이가 발생하는지**에 대해서 알아보았다. <br>
-👉🏻 [지난 포스팅이 궁금하다면 여기를 클릭해주세요!!!](https://velog.io/@minni/Understanding-Swift-Performance-Struct-VS-Class-1)
+👉🏻 [지난 포스팅이 궁금하다면 여기를 클릭해주세요!!!]({{site.url}}{{site.baseurl}}/wwdc/UnderstandingSwiftPerformance_1)
 
 ![](https://images.velog.io/images/minni/post/fc0cc906-5d33-4f1e-ad0a-f6ec0f67e7c5/image.png)
 
@@ -229,10 +229,10 @@ Swift는 이러한 enum 타입 뒤에 String을 붙여줌으로서 다음과 같
 -----
 
 이번 포스팅에서는 reference counting은 무엇이며, struct와 class일 때 발생하는 reference count 그리고 struct에서 reference count를 줄이도록 코드를 개선하는 방법에 대해서 포스팅하였고 다음 포스팅에서는 이제 마지막 측면인 **method dispatch** 에 대해서 알아보도록 하겠습니다!! <br>
-👉🏻 [다음 포스팅이 궁금하시면 여기를 눌러주세요!](https://velog.io/@minni/Understanding-Swift-Performance-Struct-VS-Class-3)
+👉🏻 [다음 포스팅이 궁금하시면 여기를 눌러주세요!]({{site.url}}{{site.baseurl}}/wwdc/UnderstandingSwiftPerformance_3)
 
 ## 중요❗️❗️❗️
-[지난 포스팅](https://velog.io/@minni/Understanding-Swift-Performance-Struct-VS-Class-1)을 보지 않고 이번 포스팅만 보시는 분들도 있을까봐 다시 한번 작성해요:)
+[지난 포스팅]({{site.url}}{{site.baseurl}}/wwdc/UnderstandingSwiftPerformance_1)을 보지 않고 이번 포스팅만 보시는 분들도 있을까봐 다시 한번 작성해요:)
 WWDC2016 Understanding Swift Performance를 보면 String 타입은 contents가 heap에 저장이 되기 때문에 heap allocation이 발생할 수 있다라고 나오게 된다. 그러나 실제로 [여기](https://github.com/apple/swift/blob/0d4a5853bf665eb860ad19a16048664899c6cce3/stdlib/public/core/StringObject.swift) 들어가서 확인해보면 string은 value의 크기나 종류에 따라서 stack에 쪼개져서 저장될 수도 있고 heap에 저장될 수도 있다고 한다. 링크에서 다음과 같은 부분을 확인해 볼 수 있다. 
 
 >  Whether this string can provide access to contiguous UTF-8 code units:

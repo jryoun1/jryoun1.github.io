@@ -12,7 +12,7 @@ last_modified_at: 2020.12.27
 ## 들어가며
 지난 포스팅은 WWDC 2016 Understanding Swift Performance 영상에서 reference counting에 대해서 알아보았다. <br>
 
-👉🏻 [지난포스팅이 궁금하신 분들은 여기를 눌러주세요!!](https://velog.io/@minni/Understanding-Swift-Performance-Struct-VS-Class-2)
+👉🏻 [지난포스팅이 궁금하신 분들은 여기를 눌러주세요!!]({{site.url}}{{site.baseurl}}/wwdc/UnderstandingSwiftPerformance_2)
 
 이번 포스팅에서는 이제 performance의 마지막 측면인 method dispatch에 대해서 알아 볼 것이다. 
 
