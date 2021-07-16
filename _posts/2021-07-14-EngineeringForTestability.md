@@ -5,7 +5,7 @@ excerpt: "WWDC17 Engineering for Testability"
 categories:
   - WWDC
 tags:
-  - [testable app code, scalable test code]
+  - [testing]
 last_modified_at: 2021.07.14
 ---
 

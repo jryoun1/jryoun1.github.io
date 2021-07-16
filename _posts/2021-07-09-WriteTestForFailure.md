@@ -5,7 +5,7 @@ excerpt: "WWDC20 Write Tests to Fail"
 categories:
   - WWDC
 tags:
-  - [setup, test, teardown]
+  - [testing]
 last_modified_at: 2021.07.09
 ---
 
