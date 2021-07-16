@@ -1,5 +1,5 @@
 ---
-title:  "Understanding Swift Performance (Struct VS Class) - 3"
+title:  "[WWDC]Understanding Swift Performance (Struct VS Class) - 3"
 excerpt: "WWDC16에 나온 Swift에서 성능을 향상시키는 방법 중에서 구조체와 클래스에 대해서 알아보자."
 
 categories:
