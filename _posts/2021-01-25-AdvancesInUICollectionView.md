@@ -1,5 +1,5 @@
 ---
-title:  "[WWDC]Advances in UICollectionView"
+title:  "[WWDC] Advances in UICollectionView"
 excerpt: "WWDC20에서 iOS 14에서 UICollectionView에서의 변화에 대해서 알아보자."
 
 categories:

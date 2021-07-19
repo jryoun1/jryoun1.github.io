@@ -1,5 +1,5 @@
 ---
-title:  "[Swift]Xcode 프로젝트에서 Storyboard 제거하기"
+title:  "[Swift] Xcode 프로젝트에서 Storyboard 제거하기"
 excerpt: "Xcode 프로젝트에서 Storyboard 제거하기"
 
 categories:

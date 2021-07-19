@@ -1,5 +1,5 @@
 ---
-title:  "[회고]야곰 iOS 커리어 스타터 캠프 회고"
+title:  "[회고] 야곰 iOS 커리어 스타터 캠프 회고"
 excerpt: "야곰 iOS 커리어 스타터 캠프 회고"
 
 categories:

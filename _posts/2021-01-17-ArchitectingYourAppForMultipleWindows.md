@@ -1,5 +1,5 @@
 ---
-title:  "[WWDC]Architecting your app for multiple windows"
+title:  "[WWDC] Architecting your app for multiple windows"
 excerpt: "WWDC19 Architecting your app for multiple window 영상에 대해서 알아보자."
 
 categories:

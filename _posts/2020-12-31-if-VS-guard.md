@@ -1,5 +1,5 @@
 ---
-title:  "[Swift]if VS guard"
+title:  "[Swift] if VS guard"
 excerpt: "Swift로 개발하는 사람이면 if와 guard의 사용에 대해서 한 번쯤은 고민을 해봤을 것 같다."
 
 categories:

@@ -1,5 +1,5 @@
 ---
-title:  "[Git]git commit log 작성 방법"
+title:  "[Git] git commit log 작성 방법"
 excerpt: "git commit log 작성 방법"
 
 categories:

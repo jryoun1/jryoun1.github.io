@@ -1,5 +1,5 @@
 ---
-title:  "[WWDC]Write Tests to Fail"
+title:  "[WWDC] Write Tests to Fail"
 excerpt: "WWDC20 Write Tests to Fail"
 
 categories:

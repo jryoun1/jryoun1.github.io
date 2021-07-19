@@ -1,5 +1,5 @@
 ---
-title:  "[Swift]Size Class"
+title:  "[Swift] Size Class"
 excerpt: "모든 기기나 상황에 따라 유연하게 대응할 수 있는 방법 중의 하나인 Size class에 대해서 알아보자."
 
 categories:

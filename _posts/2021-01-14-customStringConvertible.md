@@ -1,5 +1,5 @@
 ---
-title:  "[Swift]CustomStringConvertible"
+title:  "[Swift] CustomStringConvertible"
 excerpt: "CustomStringConvertible 프로토콜에 대해서 알아보자!"
 
 categories:
