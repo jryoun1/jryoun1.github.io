@@ -119,9 +119,7 @@ Model만 다루는 Model Controller를 따로 만들어 사용하는 방법
 - [lighter view controllers](https://www.objc.io/issues/1-view-controllers/lighter-view-controllers/) <br>
 Data Source 와 다른 protocol을 분리해내는 방법
 
-
-
-# 참고 문헌
+## 참고 문헌
 
 [Apple - UIKit about app development with UIKit](https://developer.apple.com/documentation/uikit/about_app_development_with_uikit) <br>
 [medium - iOS architecture patterns](https://medium.com/ios-os-x-development/ios-architecture-patterns-ecba4c38de52) <br>

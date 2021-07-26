@@ -180,7 +180,7 @@ Xcode에서 Info.plist의 Property List Key에 `NSLocationWhenInUseUsageDescript
 `NSLocationAlwaysAndWhenInUseUsageDescription` 를 작성해주면 된다. 
 
 
-# 참고
+## 참고
 [Apple Document Core Location](https://developer.apple.com/documentation/corelocation) <br>
 [Apple Document Adding Location Services to Your App](https://developer.apple.com/documentation/corelocation/adding_location_services_to_your_app) <br>
 [Apple Document Choosing the Location Services Authorization to Request](https://developer.apple.com/documentation/corelocation/choosing_the_location_services_authorization_to_request) <br>
