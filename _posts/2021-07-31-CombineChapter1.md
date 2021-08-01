@@ -10,7 +10,7 @@ last_modified_at: 2021.07.31
 ---
 
 ## 들어가며
-사이드 프로젝트를 진행하기로 했는데, MVVM 모델에 Combine을 적용해보기로 해서 Combine에 대해 공부가 필요한 것 같아서 [Combine: Asynchronous Programming with Swift, Chapter 1: Hello, Combine!](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/1-hello-combine) 책을 읽으면서 적용해보기로 했다. 
+사이드 프로젝트를 진행하기로 했는데, MVVM 모델에 Combine을 적용해보기로 해서 Combine에 대해 공부가 필요한 것 같아서 [Combine: Asynchronous Programming with Swift, Chapter 1: Hello, Combine!](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift) 책을 읽으면서 적용해보기로 했다. 
 
 > Apple의 말에 따르면 Combine framework는 app이 이벤트를 처리하는 방법에 있어서 선언적인 접근 방법을 제공한다고 한다. 즉, 여러 개의 delegate callback이나 completion handler 클로저를 수행하는 것이 아니라 **하나의 처리 체인을 생성하여 이를 해결하는 방법**을 제공한다. 이때 각각의 체인은 **Combine Operator** 이며, 이전 단계로부터 받은 요소에 별개의 action을 수행하게 된다. 
 
