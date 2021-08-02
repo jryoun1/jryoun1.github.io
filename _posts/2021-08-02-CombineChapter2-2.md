@@ -436,7 +436,7 @@ publisher.send(1)
 ```
 
 ## 마치며
-이번 포스팅에서는 Custom Subscriber, Future, Subject, Demand, Type erasure에 대해서 알아보았다. 이제 Chapter2의 두번째 Section에서는 본격적으로 Operator에 대해서 알아 볼 것이다. 
+이번 포스팅에서는 Custom Subscriber, Future, Subject, Demand, Type erasure에 대해서 알아보았다. 이제 Chapter3에서는 본격적으로 Operator에 대해서 알아 볼 것이다. 
 
 
 ## 참고
