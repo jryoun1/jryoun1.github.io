@@ -173,3 +173,7 @@ Combine은 다른 서드파티와의 종속성이 없다. <br> 따라서 앞으�
     - `subscribers` : 결과를 사용하여 필요한 작업을 수행
 
 이를 통해서 Combine이란 무엇이며, 왜 생겼으며 어떻게 사용하는지에 대한 개념들을 알 수 있었다. <br>Chapter2에서는 Publisher와 Subscriber에 대해서 알아볼 것이다.  
+
+## 참고
+
+[Raywenderlich Combine Chapter 1: Hello, Combine!](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/1-hello-combine)
