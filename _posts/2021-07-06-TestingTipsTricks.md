@@ -9,8 +9,6 @@ tags:
 last_modified_at: 2021.07.06
 ---
 
-
-
 # WWDC18 Testing tips & Tricks
 
 이번 세션에서는 발표자 Brian과 Stuart가 개발하는 앱을 테스팅하는 과정에서 생기는 문제들을 해결하기 위해서 다음과 같은 4가지 주제에 대해서 다루게 된다.
@@ -22,8 +20,6 @@ last_modified_at: 2021.07.06
 
 본격적으로 들어가기에 앞서 **WWDC 2017 Engineering for Testablility** 세션에 등장하는 `Pyramid of Tests` 에 대해서 간단하게 알아보고 넘어가자.
 
-
-
 ## 💡 Pyramid of Tests
 
 ![1](/assets/images/WWDC18TestingTipsTricks/1.png)
@@ -32,13 +28,9 @@ last_modified_at: 2021.07.06
 
 애플에 의하면 이러한 Pyramid 모델에 의한 테스트 접근은 **철저성(thoroughness), 품질(quality), 실행 속도(execution speed) 사이의 균형**을 잡는 데 도움이 된다고 한다.
 
-
-
 ### Unit Test
 
 Pyramid의 가장 하단에 존재하는 `Unit Test (단위테스트)` 는 함수 같이 a single piece of code를 검증하는데 도움을 주게된다. 주로 함수에 input을 넣고 기대되는 output이 나오는지 확인하는 방식으로 테스트를 진행하게 된다. 단위 테스트는 **짧고 간단하며 빠르게 실행된다는 특징**을 가진다. 
-
-
 
 ### Integration Test
 
