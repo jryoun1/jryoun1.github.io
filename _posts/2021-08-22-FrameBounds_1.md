@@ -111,6 +111,7 @@ view.transform = .init(rotationAngle: 60)
 ## bounds
 
 ![10](/assets/images/FrameBounds/10.png)
+
 `bounds`는 **자신의 좌표계에서 View의 위치와 크기**를 나타낸다. <br>
 frame이 superview의 좌표계였다면 bounds는 **자신의 좌표계**이다. <br>
 
@@ -133,7 +134,7 @@ frame이 superview의 좌표계였다면 bounds는 **자신의 좌표계**이다
 
 ![12](/assets/images/FrameBounds/12.png)
 
-frame size에서는 view가 차지하는 영역을 감싸서 만든 사각형의 origin, size로 변경됬지만 <br>
+frame size에서는 view가 차지하는 영역을 감싸서 만든 사각형의 origin,size로 변하지만 <br>
 bounds size는 회전을 해도 전혀 변경되지 않고 그대로 유지된다. <br>
 이유는 바로 **View 자체의 영역을 나타내기 때문에 origin, size 모두 변하지 않는다.** 
 
