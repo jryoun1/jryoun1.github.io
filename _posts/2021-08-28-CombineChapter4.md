@@ -532,4 +532,4 @@ numbers
 
 
 ## 참고
-[Raywenderlich Combine Chapter3: Transforming Operators](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/3-transforming-operators)
+[Raywenderlich Combine Chapter4: Filtering Operators](https://www.raywenderlich.com/books/combine-asynchronous-programming-with-swift/v2.0/chapters/4-filtering-operators)
