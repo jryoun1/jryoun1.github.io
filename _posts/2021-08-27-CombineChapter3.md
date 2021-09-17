@@ -416,7 +416,7 @@ example(of: "scan") {
 ## 마치며
 이번 포스팅에서는 Operator 중에서 Publisher로부터 방출된 값들을 변형할 수 있는 operator들에 대해서 알아볼 수 있었다. 이들 중에는 기존의 Swift library에서 사용해 본 것과 동일한 이름이며, 역할도 비슷한 것들이 있어서 익숙했던 것 같다. 
 
-[Chapter4]()에서는 Filtering과 관련된 operator에 대해서 알아보자.
+[Chapter4]({{site.url}}{{site.baseurl}}/combine/CombineChapter4)에서는 Filtering과 관련된 operator에 대해서 알아보자.
 
 
 ## 참고
