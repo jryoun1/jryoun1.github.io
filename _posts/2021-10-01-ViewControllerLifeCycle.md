@@ -75,14 +75,94 @@ Swift에서는 자식 클래스에서 지정 이니셜라이저를 따로 작성
 
 > "Prepares the receiver for service after it has been loaded from an Interface Builder archive, or nib file."
 
-Interface builder archive 또는 nib 파일이 **생성된 후 초기화 작업을 준비**하는 곳이다.
+Interface builder archive 또는 nib 파일이 **생성된 후 초기화 작업을 준비**하는 곳이다. Instance가 만들어진 후에 호출되며 IBOutlet, IBAction 스토리보드의 View가 모두 바인딩 된다. 따라서 awakeFromNib가 호출되는 시점에는 IBAction과 IBOutlet이 연결되어 있으므로 이들은 nil이 아님을 보장한다.
 
 이 메소드는 `init?(coder:)`를 통해 **뷰가 모두 언아카이빙된 후 호출된다.** `@IBOulet`과 `@IBAction`이 모두 자리가 잡힌 후 호출되는 것이다. `init?(coder:)`가 언아카이빙의 시작점이라면 `awakeFromNib()`은 끝나는 시점이라고 할 수 있다.
-
 
 ⭐️ **xib 혹은 storyboard를 통해서 view 객체를 생성하는 경우**에는 관련 init 메서드가 호출이 되지 않는다. 대신에 `awakeFromNib()` 가 호출되므로 이 안에서 상황에 맞게 초기화를 진행하면 된다. 
 
 반면에 **코드로만 view를 작성하는 경우**, 즉 storyboard나 nib, xib로 만든것이 아닌 경우에는 **awakeFromNib()은 호출되지 않는다.** 대신에 `init(frame:)` , `init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)` 와 같은 생성자 메서드를 사용해서 내부에서 초기화를 진행하면 된다. 그리고 init()을 구현하게 되면 NSCoding을 채택했기 때문에 required init?()도 필수적으로 구현해 주어야한다. 
+
+호출 순서
+- nib을 사용하는 경우
+init → initWithCoder → awakeFromNib
+- nib을 사용하지 않는 경우
+init → initWithFrame
+
+#### 의문점
+⚠️ 그렇다면 view controller에서는 왜 awakeFromNib()이이 호출되지 않을까?
+위에서 분명 storyboard도 일종의 xib로 이뤄져있기 때문에 `init?(coder:)` 를 통해서 초기화된다고 하였다. 
+```swift
+class ViewController: UIViewController {
+    @IBOutlet weak var button: UIButton!
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("1st Viewcontroller init()")
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        print("1st Viewcontroller required init()")
+    }
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        print("1st Viewcontroller awakeFromNib")
+    }
+    
+    override func loadView() {
+        super.loadView()
+        print("1st ViewController loadView()")
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print("1st ViewController viewDidLoad()")
+    }
+}
+```
+그렇다면 위에서 `init?()` 이 호출된 이후에 awakeFromNib이 호출되어야할 것 같은데 breakpoint를 걸어놔도 awakeFromNib은 호출이 되지 않는다. 
+
+그 이유는 내가 바보여서다... 당연히 불려야하고 불리는 것이 맞다.
+```swift
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        print("1st Viewcontroller awakeFromNib")
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("1st Viewcontroller awakeFromNib")
+    }
+```
+`awakeFromNib`을 치면 자동완성에 이렇게 2가지 함수가 나타나게 된다. 그러나 NSObject의 extension으로 구현되어있는 `awakeFromNib()` 의 경우에는 class 키워드가 붙지 않았으므로, class 키워드가 없는 `awakeFromNib()` 를 호출해야지만 제대로 override가 되는 것이다.
+
+왜 class func awakeFromNib()을 추천해주는거냐.. 엑코야... 하... 다음과 같이 실험을 해봤는데 원래대로라면 컴파일러 에러가 떠야하는데 안뜨는 것을 보면 무엇인가 내부에 구현이 되어있는 건가 싶은데 무엇인지는 모르겠다. 
+
+```swift
+class A {
+    open func hi() {
+        print("Ahi")
+    }
+}
+
+class B: A {
+    override func hi() {
+        print("Bhi")
+    }
+    
+    // 컴파일 에러 발생 ⚠️
+    // Method does not override any method from its superclass
+    override class func hi() {
+        print("class Bhi") 
+    }
+}
+```
+
+
+#### 의문점을 찾다가 알게 된 사실
+awakeFromNib이 호출되는 시점에서는 IBOutlet 요소들이 연결된다고 나와있지만, 그렇지 않은 경우가 있었고 이는 **viewcontroller와 view hierarchy는 서로 다른 nib 파일에서 런타임에 로드되기 때문**이라고 한다. 자세한 내용은 이 [stack overflow](https://stackoverflow.com/questions/17400547/awakefromnib-outlets-and-storyboards-is-the-documentation-wrong)를 확인해보면 된다. 
 
 
 ### 2️⃣ loadView
