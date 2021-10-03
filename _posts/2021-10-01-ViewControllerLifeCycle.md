@@ -89,7 +89,7 @@ init → initWithCoder → awakeFromNib
 - nib을 사용하지 않는 경우
 init → initWithFrame
 
-#### 의문점
+##### 의문점
 ⚠️ 그렇다면 view controller에서는 왜 awakeFromNib()이이 호출되지 않을까?
 위에서 분명 storyboard도 일종의 xib로 이뤄져있기 때문에 `init?(coder:)` 를 통해서 초기화된다고 하였다. 
 ```swift
@@ -161,7 +161,7 @@ class B: A {
 ```
 
 
-#### 의문점을 찾다가 알게 된 사실
+##### 의문점을 찾다가 알게 된 사실
 awakeFromNib이 호출되는 시점에서는 IBOutlet 요소들이 연결된다고 나와있지만, 그렇지 않은 경우가 있었고 이는 **viewcontroller와 view hierarchy는 서로 다른 nib 파일에서 런타임에 로드되기 때문**이라고 한다. 자세한 내용은 이 [stack overflow](https://stackoverflow.com/questions/17400547/awakefromnib-outlets-and-storyboards-is-the-documentation-wrong)를 확인해보면 된다. 
 
 
