@@ -166,7 +166,7 @@ UIApplicationMain을 호출하면 아래와 같이 4개의 매개변수를 넘�
 
 <img src="/assets/images/ApplicationLifeCycle/8.png" />
 
-따라서 iOS 13이후에는 이제 step2 단계(initailization)이 끝나면 위의 그림처럼 system이 scene delegate나 app delegate를 사용해서 UI를 표시하고, app의 life cycle을 관리하게 된다. 이후의 내용, 즉 scene delegate와 app delegate에 의한 이후 life cycle 관리는 [App Delegate && SceneDelegate의 역할]({{site.url}}{{site.baseurl}}ios/AppDelegate&SceneDelegate/)를 보면된다. 
+따라서 iOS 13이후에는 이제 step2 단계(initailization)이 끝나면 위의 그림처럼 system이 scene delegate나 app delegate를 사용해서 UI를 표시하고, app의 UI life cycle을 관리하게 된다. 이후의 내용, 즉 scene delegate와 app delegate에 의한 이후 UI life cycle 관리는 [App Delegate && SceneDelegate의 역할]({{site.url}}{{site.baseurl}}/ios/AppDelegate&SceneDelegate/)를 보면된다. 
 
 
 ## App Execution State
@@ -216,7 +216,7 @@ App은 총 5가지 실행 상태를 가지고 있다. 그리고 상태의 전환
 
 
 ### 마치며
-Application Life cycle에 대해서 알아볼 수 있었으며, iOS 12이전과 이후의 차이점에 대해서 좀 더 자세하게 살펴볼 수 있었던 것 같다. 이 글에서는 App launch sequence에 대해서 전반적으로 다뤘기 때문에 Application life cycle에 대해서 전체적으로 확인해보려면 [App Delegate && SceneDelegate의 역할]({{site.url}}{{site.baseurl}}ios/AppDelegate&SceneDelegate/)도 읽는 것이 좋다. 
+Application Life cycle에 대해서 알아볼 수 있었으며, iOS 12이전과 이후의 차이점에 대해서 좀 더 자세하게 살펴볼 수 있었던 것 같다. 이 글에서는 App launch sequence에 대해서 전반적으로 다뤘기 때문에 Application life cycle에 대해서 전체적으로 확인해보려면 [App Delegate && SceneDelegate의 역할]({{site.url}}{{site.baseurl}}/ios/AppDelegate&SceneDelegate/)도 읽는 것이 좋다. 
 
 ### 참고 
 [Apple document About the App Launch Sequence](https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app/about_the_app_launch_sequence) <br>
