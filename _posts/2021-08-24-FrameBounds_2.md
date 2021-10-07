@@ -47,7 +47,7 @@ frame은 **superview 좌표계를 기준**으로 하기 때문에 `grayview`를 
 (20,20)로 이동했는데, 위의 그림과 같은 결과가 나왔다. 
 
 분명 `yellowvie`w의 bounds origin을 (20,20)으로 이동했는데 <br>
-마치 `greenview`의 bounds origin이 (-20,-20)만큼 이동한 것처럼 보여진다. 
+마치 `greenview`의 frame origin이 (-20,-20)만큼 이동한 것처럼 보여진다. 
 
 이는 `frame`과는 전혀 다르다. `frame`에서는 origin의 값을 변경하면 superview를 기준으로 (x,y)만큼 이동했다면, `bounds`의 경우에는 origin을 변경한다고 해당 위치로 이동하는 것이 아니다. 
 
