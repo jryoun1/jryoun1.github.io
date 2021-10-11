@@ -110,7 +110,7 @@ point1 struct를 생성(construct)할 때는 heap allocation은 발생하지 않
 ```swift
 // Reference Counting
 // Struct containing references
-class Label {
+struct Label {
   	var text: String
   	var font: UIFont
   	func draw() { ...}
