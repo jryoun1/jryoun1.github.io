@@ -465,4 +465,4 @@ example(of: "DisposeBag") {
 
 # 참고
 
-1. [raywenderlich chapter 1](https://www.raywenderlich.com/books/rxswift-reactive-programming-with-swift/v4.0/chapters/2-observables)
+1. [raywenderlich chapter 2](https://www.raywenderlich.com/books/rxswift-reactive-programming-with-swift/v4.0/chapters/2-observables)
